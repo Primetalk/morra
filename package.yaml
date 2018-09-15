@@ -21,6 +21,8 @@ description:         Please see the README on GitHub at <https://github.com/Prim
 
 dependencies:
 - base >= 4.7 && < 5
+- transformers
+- random
 
 library:
   source-dirs: src
@@ -35,7 +37,6 @@ executables:
     - -with-rtsopts=-N
     dependencies:
     - morra
-    - transformers
 
 tests:
   morra-test:
