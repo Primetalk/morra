@@ -1,6 +1,6 @@
 module Main where
 
-import Lib
+import Morra
 
 main :: IO ()
-main = someFunc
+main = runMorra

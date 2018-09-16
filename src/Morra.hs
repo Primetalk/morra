@@ -4,6 +4,7 @@ module Morra where
 import Control.Monad.Trans.Class
 import Control.Monad.Trans.State
 import System.Random
+import System.IO
 
 -- count for player, then count for computer, then random generator
 data MorraState g where
@@ -43,6 +44,7 @@ initialState = MorraState 0 0 (mkStdGen 0)
 loop ::  RandomGen g => MorraState g -> IO (MorraState g)
 loop s = do
   putStr "P: "
+  hFlush stdout
   p <- readLn :: IO Int
   case p of
    0 -> return s
